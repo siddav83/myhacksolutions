@@ -1,18 +1,12 @@
 4
-let array = [['aba','baba','aba','xzxb'],['aba','xzxb','ab']]
+let strings = ['aba','baba','aba','xzxb']
+let queries = ['aba','xzxb','ab']
 function matchingStrings(strings, queries) {
-    let str = array[0]
-    let qry = array[1]
-    console.log(str.length,qry.length)
-    // Write your code here
-    let box = [...qry]
- for (let i = 0;i < str.length;i++) {
-     for (let j = 0;j < qry.length; j++) {
-         if(str[i] == qry[j]) {
-            box[j]+=1
-         }
-     }
- }
-console.log(box)
+  return queries.map(qry => strings.filter(str => str === qry).length))
 }
-matchingStrings(array)
+matchingStrings(strings, queries)
+
+// function matchingStrings(strings, queries) {
+// console.log(queries.map(x=>strings.filter(y=>y===x)))
+// }
+// matchingStrings(strings, queries)
