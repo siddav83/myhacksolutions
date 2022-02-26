@@ -12,8 +12,7 @@ function diagonalDifference(arr) {
                 rhs += arr[i][j]
               }
         }}
-    // Write your code here
-    console.log(lhs)
+    return Math.abs(lhs - rhs)
 }
 
 diagonalDifference(arr)
