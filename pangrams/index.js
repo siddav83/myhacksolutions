@@ -1,16 +1,18 @@
 
-const sentence = "the fbt gcat ate grass";
-const alpha = 'ate he ';
-const alp = alpha.split("");
-
-const split = sentence.split("")
+const s = "thisismeor";
 
 function pangrams(s) {
-    const alp = alpha.split("");
-    split.forEach( let => {
-        alp.forEach(i => {
-        if(let.includes(i)) {
-            console.log(let,i)
-        }})
-    })}
-    pangrams(sentence)
+  const splitSen = s.split('');
+  const alpha = 'tsmep'.split("");
+  const len = alpha.length
+
+  let counter = 0;
+
+  for (i = 0; i < splitSen.length; i++) {
+      for ( j = 0; j < len; j++) {
+          i === j ? counter ++ : counter
+      }
+    }
+    console.log(counter)
+}
+    pangrams(s)
