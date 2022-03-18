@@ -1,23 +1,17 @@
 
 // const steps = ["U","U","D","D","D","D","U","U"]
-      const steps ="UUUUUUUDDDDUDUDUDUDUDUD"
+      const steps ="DDDDUDUUUDUUUU"
 
-function countingValleys(steps, path) {
- 
-        let stepr = steps.split("");
-        let valleyCount = 0;
-        let currentSeaLevel = 0;
-        let valleyStatus = false;
-        stepr.forEach(step => {
-          step === 'U' ? currentSeaLevel++ : currentSeaLevel--;
-            if(currentSeaLevel < 0 && !valleyStatus) {
-              valleyCount++;
-              valleyStatus = true
-            } else if(currentLevel >= 0 && valleyStatus) {
-              valleyStatus= false
-            }
-          })
-
-// countingValleys(steps)
-
-console.log(steps.split(""))
+      function countingValleys(steps, path) {
+        let sealevel = 0, valley = 0, belowSeaLevel = false;
+        for ( const step of path) {
+        step == "U" ? sealevel++: sealevel--;
+        if(sealevel < 0 && !belowSeaLevel == true) {
+          valley++
+          belowSeaLevel = true
+        } else if(sealevel >= 0 && belowSeaLevel == true) {
+          belowSeaLevel = false
+        }
+        }
+        return valley
+      }
